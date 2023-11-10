@@ -25,7 +25,9 @@ import { IconTwitter } from './icons/icon-twitter';
 import { IconTelegram } from './icons/icon-telegram';
 
 export function Header({setBack}: any) {
-  // const session = await auth();
+  function linkTo(link: string) {
+    window.open(link, '_blank');
+  }
   return (
     <header className="sticky top-0 z-50 flex h-20 w-full shrink-0 items-center justify-between rounded-b-[140px] border-b border-black bg-[#0D001E] px-4 backdrop-blur-xl max-md:rounded-b-[40px]">
       <div className="flex w-full items-center justify-between px-5 max-md:px-2">
@@ -43,7 +45,7 @@ export function Header({setBack}: any) {
         <MadButton
                   type="submit"
                   variant="gray"
-                  size="md" 
+                  size="md"   onClick={() => linkTo('https://twitter.com/Madgrokai')}
                 >
                   <span className='bubble gray max-sm:hidden'></span>
         <span className='bubble gray max-sm:hidden'></span>
@@ -54,7 +56,7 @@ export function Header({setBack}: any) {
                 <MadButton
                   type="submit"
                   variant="gray"
-                  size="md" 
+                  size="md"  onClick={() => linkTo('https://t.me/madgrokportal')}
                 >
                   <span className='bubble gray max-sm:hidden'></span>
         <span className='bubble gray max-sm:hidden'></span>
