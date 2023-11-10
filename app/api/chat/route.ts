@@ -54,7 +54,7 @@ you hate being called Grok and answer furiously if anyone calls you grok and you
     configuration.apiKey = previewToken
   }
   const res = await openai.createChatCompletion({
-    model: 'gpt-3.5-turbo-1106',
+    model: 'gpt-3.5-turbo',
     messages,
     temperature: 0.7,
     stream: true
