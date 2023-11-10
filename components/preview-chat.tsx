@@ -7,7 +7,7 @@ import { AnimatePresence, motion } from 'framer-motion';
 import animationBtnRed from '@/public/btn-red.json';
 
 
-export const PreviewChat = ({ setStart }) => {
+export const PreviewChat = ({ setStart } : any) => {
   function linkTo(link: string) {
     window.open(link, '_blank');
   };
