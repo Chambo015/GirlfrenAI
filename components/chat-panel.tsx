@@ -59,11 +59,11 @@ export function ChatPanel({
     if (match && match[1] && match[1].includes('services')) setLink(match[1]);
   }
   return (
-    <div className="fixed inset-x-0 text-md bottom-0 from-muted/10 from-10% to-muted/30 to-50%">
+    <div className="text-md fixed inset-x-0 bottom-0 from-muted/10 from-10% to-muted/30 to-50%">
       <ButtonScrollToBottom />
-      <div className="mx-auto max-w-[72vw] sm:px-4">
+      <div className="mx-auto max-w-[72vw] max-md:max-w-[100vw] sm:px-4">
         {/* before h-28 if link */}
-        <div className="space-y-4 px-4 py-2">
+        <div className="space-y-4 px-4 py-2 max-md:px-2">
           {/* <Dictaphone /> */}
           <PromptForm
             onSubmit={async value => {
