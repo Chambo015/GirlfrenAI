@@ -6,20 +6,20 @@ import { IconArrowRight } from '@/components/ui/icons'
 
 const exampleMessages = [
   {
-    heading: 'What is beetroot?',
-    message: 'What is beetroot?'
+    heading: "What is beetroot?",
+    message: "What is beetroot?"
   },
   {
-    heading: 'What color is beetroot?',
-    message: 'What color is beetroot?'
+    heading: "What color is beetroot?",
+    message: "What color is beetroot?"
   },
   {
-    heading: 'What sizes can beets reach?',
-    message: 'What sizes can beets reach?'
+    heading: "What sizes can beets reach?",
+    message: "What sizes can beets reach?"
   },
   {
-    heading: 'How much does an average beet weigh?',
-    message: 'How much does an average beet weigh?'
+    heading: "How much does an average beet weigh?",
+    message: "How much does an average beet weigh?"
   },
 ]
 export function EmptyScreen({ setInput }: Pick<UseChatHelpers, 'setInput'>) {
