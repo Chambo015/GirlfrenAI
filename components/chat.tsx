@@ -24,14 +24,16 @@ import { Button } from './ui/button'
 import { Input } from './ui/input'
 import { toast } from 'react-hot-toast'
 import Image from 'next/image';
+import { Header } from './header'
 
 const IS_PREVIEW = process.env.VERCEL_ENV === 'preview'
 export interface ChatProps extends React.ComponentProps<'div'> {
   initialMessages?: Message[]
   id?: string
+  setBack: () => void
 }
 
-export function Chat({ id, initialMessages, className }: ChatProps) {
+export function Chat({ id, initialMessages, className, setBack }: ChatProps) {
   const [previewToken, setPreviewToken] = useLocalStorage<string | null>(
     'ai-token',
     null
@@ -54,7 +56,7 @@ export function Chat({ id, initialMessages, className }: ChatProps) {
     })
   return (
     <>
-    
+       <Header setBack={() => setBack()} />
       <div className={cn('pb-[200px] pt-4 md:pt-10', className)}>
         {/* <p className='text-center'>{messages.length}</p>
         <p className='text-center'>{isLoading.valueOf().toString()}</p> */}
@@ -63,7 +65,7 @@ export function Chat({ id, initialMessages, className }: ChatProps) {
           alt="Chat Background Image"
           fill={true}
           aria-hidden={true}
-          className='pointer-events-none !fixed opacity-25'
+          className='pointer-events-none !fixed object-cover opacity-25'
         />
         {messages.length || isLoading ? (
           <>

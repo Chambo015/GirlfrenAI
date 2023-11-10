@@ -205,15 +205,17 @@ function IconPlus({ className, ...props }: React.ComponentProps<'svg'>) {
 
 function IconMicrophone({ className, ...props }: React.ComponentProps<'svg'>) {
   return (
-    <svg
-        xmlns="http://www.w3.org/2000/svg"
-        fill="currentColor"
-        className={cn('h-4 w-4', className)}
-        {...props}
-        viewBox="0 0 256 256"
-    >
-      <path d="M128,176a48.05,48.05,0,0,0,48-48V64a48,48,0,0,0-96,0v64A48.05,48.05,0,0,0,128,176ZM96,64a32,32,0,0,1,64,0v64a32,32,0,0,1-64,0Zm40,143.6V232a8,8,0,0,1-16,0V207.6A80.11,80.11,0,0,1,48,128a8,8,0,0,1,16,0,64,64,0,0,0,128,0,8,8,0,0,1,16,0A80.11,80.11,0,0,1,136,207.6Z"></path>
-    </svg>
+    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="18" fill="none" viewBox="0 0 14 18">
+  <g clip-path="url(#a)">
+    <path fill="#A45B5B" d="M6.68 0a3.34 3.34 0 0 0-3.339 3.34v5.565a3.34 3.34 0 0 0 6.679 0V3.34A3.34 3.34 0 0 0 6.68 0ZM2.229 7.514a.833.833 0 0 0-.835-.835.833.833 0 0 0-.834.835v1.391c0 3.1 2.302 5.66 5.287 6.066v1.17h-1.67a.833.833 0 0 0-.835.834c0 .463.373.835.835.835h5.009a.833.833 0 0 0 .835-.835.833.833 0 0 0-.835-.835h-1.67v-1.169a6.124 6.124 0 0 0 5.288-6.066V7.514a.833.833 0 0 0-.835-.835.833.833 0 0 0-.835.835v1.391a4.452 4.452 0 1 1-8.905 0V7.514Z"/>
+  </g>
+  <defs>
+    <clipPath id="a">
+      <path fill="#fff" d="M0 0h13.357v17.81H0z"/>
+    </clipPath>
+  </defs>
+</svg>
+
   )
 }
 

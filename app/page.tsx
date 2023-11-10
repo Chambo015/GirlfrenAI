@@ -26,7 +26,7 @@ export default function IndexPage() {
           </motion.div>
         )}
       </AnimatePresence>
-      {start &&  <Chat id={id} />}
+      {start &&  <Chat id={id} setBack={() => setStart(false)} />}
     </>
   );
 }
