@@ -6,7 +6,7 @@ import Lottie from 'lottie-react';
 import { motion } from 'framer-motion';
 import animationBtnRed from '@/public/btn-red.json';
 
-export const PreviewChat: React.FC = ({ setStart }: any) => {
+export const PreviewChat: React.FC< {setStart: () => void}> = ({ setStart }) => {
   function linkTo(link: string) {
     window.open(link, '_blank');
   }
