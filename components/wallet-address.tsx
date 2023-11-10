@@ -1,3 +1,5 @@
+'use client'
+
 import React from 'react';
 import useClipboard from 'react-use-clipboard';
 import { cn } from '@/lib/utils';
