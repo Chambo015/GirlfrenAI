@@ -38,7 +38,7 @@ export function ChatMessage({ message, ...props }: ChatMessageProps) {
             remarkPlugins={[remarkGfm, remarkMath]}
             components={{
               p({ children }) {
-                return <p className="mb-2 text-xl !font-days !leading-tight last:mb-0 max-md:text-lg">{children}</p>
+                return <p className="mb-2 text-xl !font-days !leading-tight last:mb-0 max-md:text-lg !text-white">{children}</p>
               },
               code({ node, inline, className, children, ...props }) {
                 if (children.length) {

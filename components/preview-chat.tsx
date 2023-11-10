@@ -30,7 +30,7 @@ export const PreviewChat: React.FC< {setStart: () => void}> = ({ setStart }) => 
             initial={{ y: 0, opacity: 0 }}
             animate={{ y: 0, opacity: 1, }}
             transition={{ ease: 'easeOut', duration: 1, delay: 0.5 }}
-            className="absolute left-[31%] top-[68%] aspect-[3.05] h-[min(190px,25%)] max-md:left-[5vw] max-md:h-auto max-md:w-[90vw]"
+            className="absolute left-[31%] top-[68%] aspect-[3.05] h-[min(190px,25%)] max-md:left-[5vw] max-md:top-[initial] max-md:bottom-[7%] max-md:h-auto max-md:w-[90vw]"
           >
             <Image
               src="/text-main.png"
