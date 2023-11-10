@@ -38,7 +38,7 @@ export function EmptyScreen({ setInput }: Pick<UseChatHelpers, 'setInput'>) {
           </ExternalLink>
           . */}
           {/* This is a knowledge-based chatbot that can answer questions about your company. */}
-          I'm your pocket beetroot bot to help you learn more about beetroot
+          I am your pocket beetroot bot to help you learn more about beetroot
         </p>
         <p className="leading-normal text-muted-foreground">
           {/* You can start a conversation here or try the following examples: */}
