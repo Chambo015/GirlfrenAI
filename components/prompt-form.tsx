@@ -138,7 +138,7 @@ export function PromptForm({
               // Ask a question
               placeholder="Take a question..."
               spellCheck={false}
-              className="min-h-[60px] w-full max-md:text-xs max-md:py-2 resize-none bg-transparent px-4 py-[1.3rem] font-days  focus-within:outline-none sm:text-sm"
+              className="min-h-[60px] w-full max-md:text-base max-md:py-2 resize-none bg-transparent px-4 py-[1.3rem] font-days  focus-within:outline-none sm:text-lg"
             />
           </div>
           <div className="relative">
