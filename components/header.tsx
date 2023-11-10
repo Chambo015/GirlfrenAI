@@ -20,7 +20,7 @@ import { UserMenu } from '@/components/user-menu';
 import { LoginButton } from '@/components/login-button';
 import Image from 'next/image';
 
-export async function Header() {
+export function Header() {
   // const session = await auth();
   return (
     <header className="sticky top-0 z-50 flex h-16 w-full shrink-0 items-center justify-between rounded-b-[140px] border-b border-black bg-[#0D001E] px-4 backdrop-blur-xl">
