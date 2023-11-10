@@ -2,7 +2,7 @@ import { kv } from '@vercel/kv'
 import { OpenAIStream, StreamingTextResponse } from 'ai'
 import { Configuration, OpenAIApi } from 'openai-edge'
 
-import { auth } from '@/auth'
+// import { auth } from '@/auth'
 import { nanoid } from '@/lib/utils'
 
 interface ContextResponse {
@@ -24,13 +24,13 @@ const openai = new OpenAIApi(configuration)
 export async function POST(req: Request) {
   const json = await req.json();
   let { messages, previewToken } = json;
-  const session = await auth();
+  // const session = await auth();
   const question = messages[messages.length - 1].content;
-  if (session == null) {
-    return new Response('Unauthorized', {
-      status: 401
-    })
-  }
+  // if (session == null) {
+  //   return new Response('Unauthorized', {
+  //     status: 401
+  //   })
+  // }
   const templateFooter = `Question: ${question}`;
   const templateWithContext = `
   Your role is that of a kid from a poor US neighborhood who answers questions like a total bully, like a stand-up comedian.
@@ -63,7 +63,7 @@ you hate being called Grok and answer furiously if anyone calls you grok and you
   const stream = OpenAIStream(res, {
     async onCompletion(completion) {
       const title = json.messages[0].content.substring(0, 100)
-      const userId = session?.user?.id
+      const userId = '1'
       if (userId) {
         const id = json.id ?? nanoid()
         const createdAt = Date.now()

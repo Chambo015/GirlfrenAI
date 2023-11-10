@@ -2,8 +2,8 @@ import * as React from 'react';
 import Link from 'next/link';
 
 import { cn } from '@/lib/utils';
-import { auth } from '@/auth';
-import { clearChats } from '@/app/actions';
+// import { auth } from '@/auth';
+// import { clearChats } from '@/app/actions';
 import { Button, buttonVariants } from '@/components/ui/button';
 import { Sidebar } from '@/components/sidebar';
 import { SidebarList } from '@/components/sidebar-list';
@@ -21,7 +21,7 @@ import { LoginButton } from '@/components/login-button';
 import Image from 'next/image';
 
 export async function Header() {
-  const session = await auth();
+  // const session = await auth();
   return (
     <header className="sticky top-0 z-50 flex h-16 w-full shrink-0 items-center justify-between rounded-b-[140px] border-b border-black bg-[#0D001E] px-4 backdrop-blur-xl">
       <div className="flex w-full items-center justify-between">
