@@ -47,6 +47,7 @@
     "react-speech-recognition": "^3.10.0",
     "react-syntax-highlighter": "^15.5.0",
     "react-textarea-autosize": "^8.4.1",
+    "react-use-clipboard": "^1.0.9",
     "remark-gfm": "^3.0.1",
     "remark-math": "^5.1.1"
   },

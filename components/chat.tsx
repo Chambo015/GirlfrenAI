@@ -11,14 +11,6 @@ import { ChatPanel } from '@/components/chat-panel'
 import { EmptyScreen } from '@/components/empty-screen'
 import { ChatScrollAnchor } from '@/components/chat-scroll-anchor'
 import { useLocalStorage } from '@/lib/hooks/use-local-storage'
-import {
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogFooter,
-  DialogHeader,
-  DialogTitle
-} from '@/components/ui/dialog'
 import { useState } from 'react'
 import { Button } from './ui/button'
 import { Input } from './ui/input'
@@ -31,9 +23,10 @@ export interface ChatProps extends React.ComponentProps<'div'> {
   initialMessages?: Message[]
   id?: string
   setBack: () => void
+  setOpenDialog: () => void
 }
 
-export function Chat({ id, initialMessages, className, setBack }: ChatProps) {
+export function Chat({ id, initialMessages, className, setBack, setOpenDialog }: ChatProps) {
   const [previewToken, setPreviewToken] = useLocalStorage<string | null>(
     'ai-token',
     null
@@ -56,7 +49,7 @@ export function Chat({ id, initialMessages, className, setBack }: ChatProps) {
     })
   return (
     <>
-       <Header setBack={() => setBack()} />
+       <Header setBack={() => setBack()} setOpenDialog={() => setOpenDialog()}/>
       <div className={cn('pb-[200px] pt-4 md:pt-10', className)}>
         {/* <p className='text-center'>{messages.length}</p>
         <p className='text-center'>{isLoading.valueOf().toString()}</p> */}
@@ -87,7 +80,7 @@ export function Chat({ id, initialMessages, className, setBack }: ChatProps) {
         setInput={setInput}
       />
 
-      <Dialog open={previewTokenDialog} onOpenChange={setPreviewTokenDialog}>
+     {/*  <Dialog open={true} onOpenChange={setPreviewTokenDialog}>
         <DialogContent>
           <DialogHeader>
             <DialogTitle>Enter your OpenAI Key</DialogTitle>
@@ -121,7 +114,7 @@ export function Chat({ id, initialMessages, className, setBack }: ChatProps) {
             </Button>
           </DialogFooter>;
         </DialogContent>
-      </Dialog>
+      </Dialog> */}
     </>
   )
 }

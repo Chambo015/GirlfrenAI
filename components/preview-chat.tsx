@@ -6,7 +6,7 @@ import Lottie from 'lottie-react';
 import { motion } from 'framer-motion';
 import animationBtnRed from '@/public/btn-red.json';
 
-export const PreviewChat: React.FC< {setStart: () => void}> = ({ setStart }) => {
+export const PreviewChat: React.FC< {setStart: () => void, setOpenDialog: () => void}> = ({ setStart, setOpenDialog }) => {
   function linkTo(link: string) {
     window.open(link, '_blank');
   }
@@ -30,7 +30,7 @@ export const PreviewChat: React.FC< {setStart: () => void}> = ({ setStart }) => 
             initial={{ y: 0, opacity: 0 }}
             animate={{ y: 0, opacity: 1, }}
             transition={{ ease: 'easeOut', duration: 1, delay: 0.5 }}
-            className="absolute left-[31%] top-[68%] aspect-[3.05] h-[min(190px,25%)] max-md:left-[5vw] max-md:top-[initial] max-md:bottom-[7%] max-md:h-auto max-md:w-[90vw]"
+            className="absolute left-[31%] top-[68%] aspect-[3.05] h-[min(190px,25%)] max-md:fixed max-md:bottom-[7%] max-md:left-[5vw] max-md:top-[initial] max-md:h-auto max-md:w-[90vw]"
           >
             <Image
               src="/text-main.png"
@@ -47,6 +47,7 @@ export const PreviewChat: React.FC< {setStart: () => void}> = ({ setStart }) => 
           animate={{ x: 0, opacity: 1 }}
           transition={{ ease: 'easeOut', duration: 1, delay: 1 }}
           className="absolute right-[10%] top-[10%] aspect-square w-[min(30vh,30vw)] max-md:right-0 max-md:top-4 max-md:w-[50vw]"
+          onClick={() => setOpenDialog()}
         >
           <Image
             src="/smart-contract-btn.png"

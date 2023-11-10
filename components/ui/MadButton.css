@@ -5,6 +5,9 @@
 .bubble.gray {
   background-color: #7D7D7D;
 }
+.bubble.blue {
+  background-color: #8668FF;
+}
 .bubble:nth-child(1) {
   left: 6px;
   top: 9px;

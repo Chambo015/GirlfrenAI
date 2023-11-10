@@ -138,7 +138,7 @@ export function PromptForm({
               // Ask a question
               placeholder="Take a question..."
               spellCheck={false}
-              className="min-h-[60px] w-full max-md:text-base max-md:py-2 resize-none bg-transparent px-4 py-[1.3rem] font-days  focus-within:outline-none sm:text-lg"
+              className="min-h-[60px] w-full resize-none bg-transparent px-4 py-[1.3rem] font-days focus-within:outline-none max-md:py-2  max-md:text-base sm:text-lg"
             />
           </div>
           <div className="relative">
@@ -148,6 +148,7 @@ export function PromptForm({
                   type="submit"
                   size="lg"
                   disabled={isLoading || input === ''}
+                  className='max-md:h-[50px] max-md:w-[50px] max-md:border-b-2'
                 >
                   <span className="bubble "></span>
                   <span className="bubble "></span>
