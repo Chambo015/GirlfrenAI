@@ -12,8 +12,8 @@ import { Header } from '@/components/header'
 
 export const metadata: Metadata = {
   title: {
-    default: 'Mad Grok AI',
-    template: `%s - Mad Grok AI`
+    default: 'GIRLFREN.AI',
+    template: `%s - GIRLFREN.AI`
   },
   description: 'An AI-powered chatbot with context support for your website.',
   themeColor: [
@@ -21,9 +21,9 @@ export const metadata: Metadata = {
     { media: '(prefers-color-scheme: dark)', color: 'black' }
   ],
   icons: {
-    icon: '/mad-grok.png',
-    shortcut: '/mad-grok.png',
-    apple: '/apple-touch-icon.png'
+    icon: '/favicon.png',
+    shortcut: '/favicon.png',
+    apple: '/favicon.png'
   }
 }
 

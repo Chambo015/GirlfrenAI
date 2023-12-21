@@ -15,12 +15,12 @@ export function Header({ setBack, setOpenDialog }: any) {
   }
   return (
    <>
-      <header className="sticky top-0 z-50 flex h-20 w-full shrink-0 items-center justify-between rounded-b-[140px] border-b border-black bg-[#0D001E] px-4 backdrop-blur-xl max-md:rounded-b-[40px]">
+      <header className="sticky top-0 z-50 flex h-20 w-full shrink-0 items-center justify-between rounded-b-[140px] border-b border-black bg-[#1E0000] px-4 backdrop-blur-xl max-md:rounded-b-[40px]">
         <div className="flex w-full items-center justify-between px-5 max-md:px-2">
           <Image
-            width={180}
-            height={50}
-            src="/MadGrokHeader.png"
+            width={283}
+            height={83}
+            src="/girlfrienai-logo.png"
             alt="logo"
             className=" ml-5 mr-auto shrink-0 max-md:ml-0 max-md:w-[170px] "
             style={{ cursor: 'pointer' }}

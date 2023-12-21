@@ -54,7 +54,7 @@ export function Chat({ id, initialMessages, className, setBack, setOpenDialog }:
         {/* <p className='text-center'>{messages.length}</p>
         <p className='text-center'>{isLoading.valueOf().toString()}</p> */}
         <Image 
-          src="/ChatBackgroundImage.png"
+          src="/home-bg.png"
           alt="Chat Background Image"
           fill={true}
           aria-hidden={true}
